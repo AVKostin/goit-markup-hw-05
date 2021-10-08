@@ -68,7 +68,7 @@ body {
   border-radius: 2px;
   background-color: var(--accent-color);
   display: block;
-  bottom: 0px;
+  bottom: 0;
 }
 
 .link {
@@ -106,13 +106,11 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  /* background-color: var(--accent-color); */
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--backgound-color-base);
-  /* transition: background-color 300ms ease-in-out; */
-  /* transition: fill 300ms ease; */
+  transition: background-color 300ms ease-in-out fill 300ms ease;
 }
 
 .social-link-footer {
@@ -140,11 +138,11 @@ body {
 .social-link:focus .social-icon {
   fill: #ffffff;
 }
-
+/* 
 .social-link-footer:hover .social-icon,
 .social-link-footer:focus .social-icon {
   fill: #ffffff;
-}
+} */
 
 .social-icon {
   fill: var(--icon-color);
@@ -168,6 +166,7 @@ body {
 /* ---------- Header ---------- */
 
 .header {
+  width: 100%;
   display: flex;
   align-items: center;
 }
@@ -180,11 +179,13 @@ body {
 .header-navigation {
   display: flex;
   align-items: center;
+  transition: color 300ms linear, background-color 300ms linear;
 }
 
 .header-item {
   padding-bottom: 32px;
   padding-top: 32px;
+  position: relative;
 }
 
 .header-list {
@@ -228,6 +229,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--header-text-color);
   transition: color 300ms linear, background-color 300ms linear;
+  /* position: relative; */
 }
 
 .header-link:hover,
@@ -258,15 +260,18 @@ body {
   transition: color 300ms linear, background-color 300ms linear;
 }
 
-.header-logo:hover {
+.header-logo:hover,
+.header-logo:focus {
   color: #000000;
 }
 
 .header-logo-text {
   color: var(--header-text-color);
+  transition: color 300ms linear, background-color 300ms linear;
 }
 
-.header-logo-text:hover {
+.header-logo:hover .header-logo-text,
+.header-logo:focus .header-logo-text {
   color: var(--accent-color);
 }
 
@@ -536,16 +541,18 @@ body {
   color: var(--accent-color);
 }
 
-.footer-logo:hover {
+.footer-logo:hover,
+.footer-logo:focus {
   color: var(--primary-title-color);
 }
 
 .footer-logo-text {
   color: #ffffff;
+  transition: color 300ms ease-in-out;
 }
 
-.footer-logo-text:hover,
-.footer-logo-text:focus {
+.footer-logo:hover .footer-logo-text,
+.footer-logo:focus .footer-logo-text {
   color: var(--accent-color);
 }
 
@@ -749,8 +756,6 @@ body {
   transition: transform 300ms ease;
 }
 
-.button {
-}
 .close-btn {
   position: absolute;
   right: 10px;
