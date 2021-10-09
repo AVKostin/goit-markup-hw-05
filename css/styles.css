@@ -270,8 +270,7 @@ body {
 /* ---------- Hero Section ---------- */
 
 .hero {
-  width: 1600px;
-  /* width: auto; */
+  max-width: 1600px;
   margin: 0 auto;
   background: #2f303a;
   background-image: linear-gradient(
